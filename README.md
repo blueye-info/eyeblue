@@ -6,13 +6,17 @@
 ```bash
 pip install eyeblue
 ```
-或者
-1.从github上下载
-2.
+或者\
+1.从github上下载\
+2.\
 ```bash
 python setup.py install
 ```
 
 # API文档
 
-详见help.ipy
+详见help.ipynb
+
+# 交易所，品种参数
+
+详见exchanges_symbols_full.json
