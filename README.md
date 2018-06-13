@@ -8,7 +8,7 @@ pip install eyeblue
 ```
 或者\
 1.从github上下载\
-2.\
+2.
 ```bash
 python setup.py install
 ```
