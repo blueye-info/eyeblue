@@ -1,23 +1,23 @@
 # 蓝目达--行情交易接口
-蓝目达是一个专门为数字货币开发的行情交易接口，行情接口包含了多个交易所的的行情，分为websocket和restful两种模式，websocket全推模式更为高效。交易接口同样涵盖了多个交易所多个品种。
+蓝目达是一个专门为数字货币开发的行情交易接口，行情接口包含了多个交易所的的行情，分为websocket和restful两种模式，websocket全推模式更为高效。交易接口同样涵盖了多个交易所多个品种。\
 
 # 使用对象 
-数字货币数据分析师
-数字货币量化交易的个人或团队 
-对数字货币交易感兴趣的机构
-分析行情数据的个人或团队
-正在学习pthon及数据分析的人
+数字货币数据分析师\
+数字货币量化交易的个人或团队\ 
+对数字货币交易感兴趣的机构\
+分析行情数据的个人或团队\
+正在学习pthon及数据分析的人\
 
 
 
 # 使用前提
-安装python3.5以上
-安装pandas
-windows上建议安装Anaconda（http://www.continuum.io/downloadsz）。
+安装python3.5以上\
+安装pandas\
+windows上建议安装Anaconda（http://www.continuum.io/downloadsz)。\
 
 
 # 下载安装
-方式一
+方式一：
 ```bash
 pip install eyeblue
 ```
@@ -27,11 +27,11 @@ pip install eyeblue
 ```bash
 python setup.py install
 ```
-
+\
 # API文档
 
-详见help.ipynb
+详见help.ipynb\
 
 # 交易所，品种参数
 
-详见exchanges_symbols_full.json
+详见exchanges_symbols_full.json\
