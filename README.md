@@ -15,6 +15,7 @@
 安装python3.5以上\
 安装pandas5.0以上\
 安装ws4py\
+安装pandas\
 windows上建议安装Anaconda,是一个集成了python多种库的环境
 
 
