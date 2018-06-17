@@ -13,8 +13,9 @@
 
 # 使用前提
 安装python3.5以上\
-安装pandas\
-windows上建议安装Anaconda（http://www.continuum.io/downloadsz)。
+安装pandas5.0以上\
+安装ws4py
+windows上建议安装Anaconda,是一个集成了python多种库的环境
 
 
 # 下载安装

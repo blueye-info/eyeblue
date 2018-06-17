@@ -5,6 +5,9 @@ class Util():
         self.token = ' '
         self.exchange = 'bittrex'
         self.account_id = '0006'
+        
+    def set_token(self, token):
+        self.token = token
 
     def login(self, name, pwd):
         HOST = '18.144.25.71'
