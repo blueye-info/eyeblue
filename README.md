@@ -28,11 +28,11 @@ windows上建议安装Anaconda,是一个集成了python多种库的环境
 pip install eyeblue
 ```
 方式二：\
-1.从github上下载\
+1.从github上下载
 ```bash
 git clone https://github.com/blueye-info/eyeblue.git
 ```
-2.setup.py安装\
+2.setup.py安装
 ```bash
 python setup.py install
 ```
