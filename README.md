@@ -1,5 +1,11 @@
-# 蓝目达数据
-蓝目达是一个专门为数字货币开发的行情交易接口，行情接口包含了多个交易所的的行情，分为websocket和restful两种模式，websocket全推模式更为高效。交易接口同样涵盖了多个交易所多个品种。
+# 蓝目数据
+=====
+蓝目数据：蓝目数据提供了全球各大主流数字资产交易所的全部品种的实时交易行情和各类历史数据，供专业的投资机构和个人宽客使用。数据包含了实时数据ticker, 深度数据depth, 各周期历史kline.并且提供了各个交易所的委托下单、委托撤单、交易信息查询等接口。\
+目前支持的数字资产交易所包括：bitfinex, kraken, bitstamp, bittrex, okex, huobi, binance, bitmex,zb, poloniex, bithumb.
+提供详细的API访问接口文档，以及针对python, C++ 和java 的客户端访问源码。
+
+[官方网站](https://www.blueye.info)
+
 
 # 致谢
 
@@ -14,13 +20,11 @@
 # 使用前提
 安装python3.5以上\
 安装pandas5.0以上\
-安装ws4py\
-安装pandas\
 windows上建议安装Anaconda,是一个集成了python多种库的环境
 
 
 # 下载安装
-方式一：
+方式一：(目前暂不提供这种方法)
 ```bash
 pip install eyeblue
 ```
@@ -46,8 +50,8 @@ print(eyeblue.__versionn__)
 
 # API文档
 
-详见help.ipynb
+详见[help.ipynb](https://github.com/blueye-info/eyeblue/blob/master/help.ipynb)
 
 # 交易所，品种参数
 
-详见exchanges_symbols_full.json
+详见[exchanges_symbols_full.json](https://github.com/blueye-info/eyeblue/blob/master/exchanges_symbols_full.json)
