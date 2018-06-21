@@ -29,7 +29,10 @@ pip install eyeblue
 ```
 方式二：\
 1.从github上下载\
-2.
+```bash
+git clone https://github.com/blueye-info/eyeblue.git
+```
+2.setup.py安装\
 ```bash
 python setup.py install
 ```
