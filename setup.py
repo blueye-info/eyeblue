@@ -7,12 +7,11 @@ setup(
     description="A utility for digital cash",
     author="banjuanshua",
     author_email='593474341@qq.com',
-    url="https://github.com/blueye-info/eyeblue",
+    url="https://www.blueye.info",
+    download_url='',
     keywords='Digital Cash Data',
     install_requires=[
-        'pandas'
+        'pandas',
         'numpy',
-        'urllib',
-		'ws4py'
     ]
 )

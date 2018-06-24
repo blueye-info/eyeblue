@@ -1,39 +1,60 @@
-from ws4py.client.threadedclient import WebSocketClient
+import socket
 import ssl
+import pprint
 
-class WsClient(WebSocketClient):
-    def handle_msg(self, m):
+
+class WsClient():
+    def __init__(self, ip, port, para):
+        self.ip = str(ip)
+        self.port = int(port)
+        self.para = para.encode()
+        self.f = open('log.txt', 'w')
+
+    def handle_msg(self, msg):
         pass
 
-    def opened(self):
-        self.send(self.para)
+    def connect(self):
+        while True:
+            try:
+                print('连接中')
+                sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                sock.settimeout(10)
+                self.ssl_sock = ssl.wrap_socket(sock,
+                                                ca_certs="server.crt",
+                                                cert_reqs=ssl.CERT_REQUIRED)
 
-    def closed(self, code, reason=None):
-        print('websocket connection closed')
+                self.ssl_sock.connect((self.ip, self.port))
+                print('连接成功')
+
+                self.ssl_sock.sendall(self.para)
+                return
+            except:
+                continue
 
 
-    def received_message(self, m):
-        self.handle_msg(m)
+    def run(self):
+        self.connect()
 
-def create_ws(url, para, handle_func):
-    ws = WsClient(url,protocols=['http-only', 'chat'])
-    ws.handle_func = handle_msg
-    ws.para = para.encode()
+        while True:
+            try:
+                msg_len = int(self.ssl_sock.recv(4))
+                msg = self.ssl_sock.recv(msg_len)
+                msg = msg.decode()
+                self.handle_msg(msg)
+            except:
+                self.connect()
+                self.f.write('重连\n')
+                continue
 
-    ws.connect()
-    ws.run_forever()
 
-    return ws
+    def ssl_info(self):
+        pprint.pprint(self.ssl_sock.getpeercert())
 
 
 if __name__ == '__main__':
+    def my_handle(m):
+        print(m)
 
-    #ws = WsClient('ws://118.25.40.163:8088', protocols=['chat'])
-
-    def handle_msg(m):
-        print(123)
-
-    print(1)
-    ws = create_ws('wss://49.51.228.40:8003/websocket',
-                   '{"event":"quote","content":"sub_huobi_$symbol_ticker"}',
-                   handle_msg)
+    ws = WsClient('gw.blueye.info', 1818, '{"event":"quote","content":"sub_huobi_$symbol_ticker"}')
+    ws.handle_msg = my_handle
+    ws.run()
