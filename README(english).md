@@ -7,7 +7,6 @@ We provides detailed documentation of API access interface, as well as source co
 [Official Website](https://www.blueye.info)
 
 
-## Thanks
 
 ## User
 Digital Currency Data Analyst\
