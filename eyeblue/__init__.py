@@ -3,4 +3,4 @@ from eyeblue.quotations import (get_depth, get_ticker,
 
 from eyeblue.trade import (Util)
 
-from eyeblue.stream import (create_connection, WsClient)
+from eyeblue.stream import (WsClient)
