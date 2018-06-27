@@ -66,4 +66,4 @@ retful行情参数(get相关函数)：\
 
 websocket行情参数(wsclient):\
 不用交易所行情对应不同ip和port\
-详见[websocket.json]()
+详见[websocket.json](https://github.com/blueye-info/eyeblue/blob/master/client_ip_config.json)
