@@ -1,0 +1,20 @@
+{
+	"quote"
+	{
+		"okex":"gw.blueye.info:5001",
+		"huobi":"gw.blueye.info:5002",
+		"bitfinex":"gw.blueye.info:5003",
+		"bithumb":"gw.blueye.info:5004",
+		"binance":"gw.blueye.info:5005",
+		"zb":"gw.blueye.info:5006",
+		"kraken":"gw.blueye.info:5007",
+		"poloniex":"gw.blueye.info:5008",
+		"bitstamp":"gw.blueye.info:5009",
+		"bittrex":"gw.blueye.info:5011"
+	},
+	trade
+	{
+		"smart":"127.0.0.1:1818"
+	}
+}
+
