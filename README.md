@@ -52,14 +52,14 @@ print(eyeblue.__versionn__)
 ## API文档
 
 详见[help.ipynb](https://github.com/blueye-info/eyeblue/blob/master/help.ipynb)\
-websocket使用：\
-不同交易所有不同地址和端口，使用时需要自己传入\
-```bash
 
-```
 
 
 
 ## 交易所，品种参数
 
-详见[exchanges_symbols_full.json](https://github.com/blueye-info/eyeblue/blob/master/exchanges_symbols_full.json)
+retful行情参数(get相关函数)：\
+[exchanges_symbols_full.json](https://github.com/blueye-info/eyeblue/blob/master/exchanges_symbols_full.json)
+websocket行情参数(wsclient):\
+使用时将对应交易所的地址和端口传入wsclient构造函数中\
+[websocket.json]()
