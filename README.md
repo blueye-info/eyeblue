@@ -61,7 +61,6 @@ print(eyeblue.__versionn__)
 retful行情参数(get相关函数)：\
 详见[exchanges_symbols_full.json](https://github.com/blueye-info/eyeblue/blob/master/exchanges_symbols_full.json)
 ```bash
-详见[exchanges_symbols_full.json](https://github.com/blueye-info/eyeblue/blob/master/exchanges_symbols_full.json)
 ```
 
 websocket行情参数(wsclient):\
