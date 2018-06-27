@@ -51,7 +51,14 @@ print(eyeblue.__versionn__)
 
 ## API文档
 
-详见[help.ipynb](https://github.com/blueye-info/eyeblue/blob/master/help.ipynb)
+详见[help.ipynb](https://github.com/blueye-info/eyeblue/blob/master/help.ipynb)\
+websocket使用：\
+不同交易所有不同地址和端口，使用时需要自己传入\
+```bash
+
+```
+
+
 
 ## 交易所，品种参数
 
