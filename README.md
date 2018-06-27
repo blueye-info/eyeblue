@@ -59,7 +59,6 @@ print(eyeblue.__versionn__)
 ## 交易所，品种参数
 
 retful行情参数(get相关函数)：\
-不同交易所行情对应不同url\
 详见[exchanges_symbols_full.json](https://github.com/blueye-info/eyeblue/blob/master/exchanges_symbols_full.json)
 ```bash
 ```
