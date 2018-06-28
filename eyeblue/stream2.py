@@ -1,9 +1,9 @@
 import socket
-import ssl
 import pprint
+import time
 
 
-class ssl_WsClient():
+class WsClient():
     def __init__(self, ip, port, para, token=' '):
         self.ip = str(ip)
         self.port = int(port)
@@ -15,20 +15,18 @@ class ssl_WsClient():
             para = str(para)
         self.para = para.encode()
 
+
     def connect(self):
         while True:
             try:
                 print('连接中')
-                sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                sock.settimeout(10)
-                self.ssl_sock = ssl.wrap_socket(sock,
-                                                ca_certs="server.crt",
-                                                cert_reqs=ssl.CERT_REQUIRED)
+                self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                self.sock.settimeout(10)
 
-                self.ssl_sock.connect((self.ip, self.port))
+                self.sock.connect((self.ip, self.port))
                 print('连接成功')
 
-                self.ssl_sock.sendall(self.para)
+                self.sock.sendall(self.para)
                 return
             except BaseException as e:
                 print(e)
@@ -37,14 +35,19 @@ class ssl_WsClient():
 
     def run(self):
         self.connect()
-        self.ssl_sock.settimeout(120)
+        self.sock.settimeout(60)
+
+
         while True:
             try:
-                msg_len = int(self.ssl_sock.recv(4))
-                msg = self.ssl_sock.recv(msg_len)
+                msg_len = int(self.sock.recv(4).decode())
+                time.sleep(0.07)
+                msg = self.sock.recv(msg_len)
                 msg = msg.decode()
-                self.handle_msg(msg)
-            except:
+                #self.handle_msg(msg)
+                yield msg
+            except BaseException as e:
+                print(e)
                 self.connect()
                 self.f.write('重连\n')
                 continue
@@ -55,6 +58,8 @@ class ssl_WsClient():
 
 
 if __name__ == '__main__':
-    ws = ssl_WsClient('gw.blueye.info', 5003, '{"event":"quote","content":"sub_huobi_$symbol_ticker"}', ' ')
+    ws = WsClient('gw.blueye.info', 5003, '{"event":"quote","content":"sub_huobi_$symbol_ticker"}',
+                  token=' ')
+
     for data in ws.run():
         print(data)
