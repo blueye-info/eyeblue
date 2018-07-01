@@ -22,7 +22,7 @@ windows上建议安装Anaconda,是一个集成了python多种库的环境
 
 
 ## 下载安装
-方式一：(目前暂不提供这种方法)
+方式一：
 ```bash
 pip install eyeblue
 ```
