@@ -15,7 +15,7 @@ def get_k_data(symbol, k_type, exchange='bitfinex',
     if k_type not in cf.all_k_type:
         raise NameError('type not eixts')
 
-    re_url = 'http://kx.18hezi.com/bitquote/v1/kline?' \
+    re_url = 'http://kline.blueye.info/bitquote/v1/kline?' \
              'exchange={}&symbol={}&since={}&size={}&' \
              'type={}'.format(exchange, symbol, since,size, k_type)
 
@@ -48,7 +48,7 @@ def get_ticker(symbol, exchange='bitfinex'):
         if symbol not in cf.all_ex_sy[exchange]:
             raise NameError('symbol not eixts')
 
-    re_url = 'http://kx.18hezi.com/bitquote/v1/ticker?' \
+    re_url = 'http://kline.blueye.info/bitquote/v1/ticker?' \
              'exchange={}&symbol={}'.format(exchange,symbol)
 
     req = request.Request(url=re_url)
@@ -66,7 +66,7 @@ def get_depth(symbol, exchange='bitfinex'):
         if symbol not in cf.all_ex_sy[exchange]:
             raise NameError('symbol not eixts')
 
-    re_url = 'http://kx.18hezi.com/bitquote/v1/depth?' \
+    re_url = 'http://kline.blueye.info/bitquote/v1/depth?' \
              'exchange={}&symbol={}'.format(exchange,symbol)
 
     req = request.Request(url=re_url)
