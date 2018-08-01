@@ -19,6 +19,7 @@
 安装python3.5以上\
 安装pandas5.0以上\
 windows上建议安装Anaconda,是一个集成了python多种库的环境
+[Anaconda下载](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)
 
 
 ## 下载安装
@@ -68,8 +69,7 @@ websocket行情参数(wsclient):\
 详见[client_ip_config.json](https://github.com/blueye-info/eyeblue/blob/master/client_ip_config.json)
 [TBotApi.json](https://github.com/blueye-info/eyeblue/blob/master/TBotApi.json)
 
-## commit
+## 联系客服
 
-|Author|banjuanshua|
-|---|---
-|E-mail|593474341@qq.com
+QQ: 3405106942  
+Email: 3405106942@qq.com
