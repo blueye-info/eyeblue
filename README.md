@@ -18,7 +18,7 @@
 ## 使用前提
 安装python3.5以上\
 安装pandas5.0以上\
-windows上建议安装Anaconda,是一个集成了python多种库的环境
+windows上建议安装Anaconda,是一个集成了python多种库的环境\
 [Anaconda下载](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)
 
 
@@ -52,7 +52,7 @@ print(eyeblue.__versionn__)
 
 ## API文档
 
-详见[help.ipynb](https://github.com/blueye-info/eyeblue/blob/master/help.ipynb)\
+详见[help.ipynb](https://github.com/blueye-info/eyeblue/blob/master/help.ipynb)
 
 
 
